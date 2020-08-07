@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../src/sass/Blocks/animation.sass"
+    ],
+    "names": [],
+    "file": "animation.css"
+}

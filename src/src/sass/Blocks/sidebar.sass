@@ -1,0 +1,121 @@
+  
+.card
+    border: 2px solid rgba(255, 255, 255, 0)
+    transition: 0.2s
+    &:hover
+        border: 2px solid rgba(41, 32, 83, 0.863)
+    .card-body
+        h5, span
+            .pen
+                opacity: 0.2
+        h5:hover, span:hover
+            .pen
+                opacity: 0.9
+    .pen
+        z-index: 100
+        margin-left: 15px
+        transition: 0.3s
+        cursor: pointer
+        path
+            fill: #0000005e
+            transition: 0.3s
+        &:hover path
+            transition: 0.3s
+            fill: black
+
+.sidebar
+    display: flex
+    justify-content: center
+    width: 100%
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)
+    box-sizing: border-box
+    min-height: 100vh
+    z-index: 100
+    &__announcement
+        min-width: 0 !important
+        margin: 0 !important
+        background-color: #dacbcb3f
+        border: 2px solid rgba(25, 39, 167, 0.39)
+        cursor: pointer
+        .card-footer
+            display: none
+        .sidebar__menu_list_container
+            .card-body
+                padding: 5px !important
+                .card-title
+                    margin-bottom: 0 !important
+                    .redact_pen
+                        display: none
+                span
+                    display: none !important
+    
+            
+    &__add-folder
+        position: relative
+        .redact_pen, .card-text, .card-footer
+            display: none
+    &__menu_list  &__add-folder
+        display: flex
+        align-items: center
+        margin-bottom: 10px
+        min-width: 180px
+        height: 67px
+        transition: 0.3s
+        cursor: pointer
+        &:hover
+            background: #FFFFFF
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05)
+            border-radius: 4px
+            transition: 0.2s
+        svg
+            margin-right: 10px
+            margin-left: 12px
+    
+    &__add-folder
+        opacity: 0.5
+        &:hover
+            opacity: 1
+            background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%) !important
+            
+    &__menu_list_x
+        transition: 0.3s
+        padding: 2px
+        position: absolute
+        right: 0
+        top: 0
+        margin: auto
+        cursor: pointer
+       
+    .card:hover &__menu_list_x, .x_color
+        display: block
+        transition: 0.2s
+        opacity: 0.8
+
+    .card &__menu_list_x
+        display: none
+        
+        
+
+    &__menu_list_x:hover .x_color
+        
+        transition: 0.2s
+        fill: black
+        opacity: 1
+.active
+    border: 2px solid black
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05)
+    border-radius: 4px
+    transition: 0.2s
+    &:hover
+        transition: 0.2s
+        
+.add-list ul li:hover
+    .sidebar__menu_list_x
+        display: none
+
+   
+
+.buttonAddLoad:hover
+    cursor: no-drop
+
+  

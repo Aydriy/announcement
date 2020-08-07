@@ -1,4 +1,5 @@
 {
+  "homepage": "http://Aydriy.github.io/announcement",
   "name": "announcement",
   "version": "0.1.0",
   "private": true,
@@ -6,15 +7,22 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "axios": "^0.19.2",
+    "bootstrap": "^4.5.0",
+    "classnames": "^2.2.6",
+    "node-sass": "^4.14.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "styled-components": "^5.1.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start & parcel index.html",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "fake-json": "json-server ./src/src/data/db.json --watch --port 3001"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -30,5 +38,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "bulma": "^0.9.0",
+    "parcel": "^1.12.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }
